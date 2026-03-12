@@ -1,0 +1,431 @@
+/* GLOBAL FIX */
+
+*{
+  box-sizing:border-box;
+}
+
+body{
+  margin:0;
+  font-family: 'Segoe UI', sans-serif;
+  background:#2e2a2a;
+  color:white;
+  overflow-x:hidden;
+}
+
+/*------------------- NAVBAR --------------------*/
+.navbar{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:20px 5%;
+  position:relative;
+}
+
+.nav-left a,
+.nav-right a{
+  margin:0 15px;
+  text-decoration:none;
+  color:#ccc;
+  font-size:14px;
+}
+
+.nav-left a:hover,
+.nav-right a:hover{
+  color:#ffa500;
+}
+
+/* LOGO */
+
+.logo{
+  text-align:center;
+}
+
+.logo-top{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+}
+
+.logo h2{
+  margin:0;
+}
+
+.heart{
+  color:#ff9800;
+  font-size:32px;
+}
+
+.tagline{
+  font-size:12px;
+  color:#aaa;
+}
+
+/* HAMBURGER */
+
+.hamburger{
+  display:none;
+  font-size:28px;
+  color:white;
+  cursor:pointer;
+}
+
+/* MOBILE */
+
+@media (max-width: 768px){
+
+  .hamburger{
+    display:block;
+  }
+
+  .nav-left,
+  .nav-right{
+    position:absolute;
+    top:80px;
+    left:0;
+    width:100%;
+    background:#1e1e1e;
+    flex-direction:column;
+    align-items:center;
+    display:none;
+  }
+
+  .nav-left a,
+  .nav-right a{
+    margin:15px 0;
+    display:block;
+  }
+
+  .nav-left.active,
+  .nav-right.active{
+    display:flex;
+  }
+
+  .navbar{
+    flex-wrap:wrap;
+  }
+
+}
+
+/* ----------------- HERO --------------- */
+
+.hero{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-wrap:wrap;
+  padding:80px 5%;
+  gap:60px;
+}
+
+.hero-image img{
+  max-width:100%;
+  width:420px;
+  border-radius:0;
+  box-shadow:none;
+}
+
+.hero-content{
+  max-width:450px;
+}
+
+.hero-content h1{
+  font-size:48px;
+  line-height:1.2;
+}
+
+.hero-content span{
+  color:#ff9800;
+}
+
+.hero-content p{
+  color:#ccc;
+  margin:20px 0;
+}
+
+.hero-content button{
+  background:#ff9800;
+  border:none;
+  padding:12px 25px;
+  font-size:16px;
+  color:white;
+  cursor:pointer;
+}
+
+.hero-content button:hover{
+  background:#e68900;
+}
+
+
+/* -------------ABOUT SECTION -----------------*/
+
+.about-section{
+  background:hsl(0, 100%, 0%);
+  padding:80px 5%;
+}
+
+.about-container{
+  display:flex;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:60px;
+}
+
+.about-image img{
+  max-width:100%;
+  width:420px;
+  height:420px;
+  object-fit:cover;
+  border-radius:4px;
+}
+
+.about-content{
+  max-width:420px;
+}
+
+.about-content h2{
+  color:white;
+  font-size:28px;
+  margin-bottom:15px;
+}
+
+.about-content p{
+  color:#cfcfcf;
+  line-height:1.7;
+  font-size:15px;
+}
+
+
+/* ---------------FOOD QUALITY ------------- */
+
+
+.food-quality{
+  position:relative;
+  height:320px; /* reduced height */
+  background:#2c2626;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding-left:8%; 
+  overflow:hidden;
+}
+
+/* CONTENT */
+
+.quality-content{
+  position:relative;
+  z-index:1;
+  color:white;
+  max-width:400px;
+}
+
+.quality-content h2{
+  font-size:32px;
+  margin-bottom:15px;
+}
+
+.quality-content p{
+  color:#f1f1f1;
+  line-height:1.7;
+}
+
+/* IMAGE */
+
+.quality-image{
+  position:relative;
+  z-index:1;
+  max-width:40%;
+  display:flex;
+  justify-content:flex-end;
+}
+
+.quality-image img{
+  width:100%;
+  max-width:380px;
+  border-radius:10px;
+}
+/* ---------------OUR MENU ------------- */
+
+/* MENU SECTION */
+
+.menu-section{
+  background:#2c2626;
+  padding:100px 120px;
+  text-align:center;
+}
+
+/* TITLE */
+
+.menu-title{
+  font-size:36px;
+  margin-bottom:60px;
+  color: white;
+}
+
+/* ROW */
+
+.menu-row{
+  justify-content:center;
+}
+
+/* MENU ITEM */
+
+.menu-item{
+  text-align:center;
+  margin-bottom:40px;
+}
+
+/* IMAGE */
+
+.menu-item img{
+  width:250px;
+  height:250px;
+  object-fit:cover;
+  border-radius:10px;
+}
+
+/* TITLE */
+
+.menu-item h4{
+  font-size:20px;
+  margin-bottom:10px;
+}
+
+/* DESCRIPTION */
+
+.menu-item p{
+  color:#cfcfcf;
+  font-size:14px;
+  margin-bottom:10px;
+}
+
+/* PRICE */
+
+.price{
+  color:#ff9800;
+  font-size:18px;
+  font-weight:bold;
+}
+
+/* ------------------ENJOY MEAL SECTION ------------------------*/
+
+.enjoy-food{
+  min-height:350px;              /* proper height */
+  background-size:cover;
+  background-position:center;
+  background-repeat:no-repeat;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  padding:80px 5%;               /* space from top & bottom */
+}
+
+.enjoy-meal-section{
+  background:#ff9800;
+  padding:20px 100px; 
+}
+
+.meal-image img{
+  width:420px;
+  max-width:100%;
+}
+
+.meal-content h2{
+  color:white;
+  font-size:40px;
+  margin-bottom:20px;
+}
+
+.meal-content p{
+  color:#fff3e0;
+  font-size:16px;
+  line-height:1.7;
+}
+
+.food-box{
+  background:rgba(0,0,0,0.75);
+  padding:40px 60px;
+  max-width:600px;
+  text-align:center;
+
+  border:4px solid #ff9800;
+}
+
+.food-box h2{
+  font-size:32px;
+  margin-bottom:20px;
+  color:white;
+}
+
+.food-box p{
+  color:#ddd;
+  line-height:1.7;
+  font-size:15px;
+}
+
+/*--------------------- FOOTER ----------------------*/
+
+.footer-section{
+  background:#2e2a2a;
+  text-align:center;
+  padding:50px 0;
+}
+
+/* LOGO */
+
+.footer-logo{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:10px;
+  margin-bottom:25px;
+}
+
+.footer-logo h2{
+  color:white;
+  font-weight:600;
+}
+
+.heart{
+  color:#ff9800;
+  font-size:45px;   /* bigger heart */
+}
+
+
+/* MENU */
+
+.footer-menu{
+  margin-bottom:25px;
+}
+
+.footer-menu a{
+  margin:0 15px;
+  text-decoration:none;
+  color:#ccc;
+  font-size:14px;
+}
+
+.footer-menu a:hover{
+  color:#ff9800;
+}
+
+/* SOCIAL ICONS */
+
+.footer-social{
+  display:flex;
+  justify-content:center;
+  gap:20px;
+  font-size:20px;
+  color:white;
+}
+
+.footer-social svg{
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.footer-social svg:hover{
+  color:#ff9800;
+}
